@@ -11,7 +11,15 @@
         <div id="spinner" class="spinner" style="display:none;">
             <img src="${resource(dir:'images',file:'spinner.gif')}" alt="${message(code:'spinner.alt',default:'Loading...')}" />
         </div>
-        <div id="grailsLogo"><a href="http://grails.org"><img src="${resource(dir:'images',file:'grails_logo.png')}" alt="Grails" border="0" /></a></div>
-        <g:layoutBody />
+        <div id="contentHolder">
+        	<div id="content">
+        		<div class="menu"><ul>
+          			<li><g:link controller="livre">Livres</g:link></li>
+          			<li><g:link controller="CD">CDs</g:link></li>
+          			<li><g:link controller="DVD">DVDs</g:link></li>
+        		</ul></div>        		
+        		<g:layoutBody />
+        	</div>
+	    </div>
     </body>
 </html>

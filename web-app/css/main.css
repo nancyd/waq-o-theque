@@ -58,12 +58,37 @@ input:focus, select:focus, textarea:focus {
 }
 
 .body {
-    float: left;
-    margin: 0 15px 10px 15px;
+}
+	
+#contentHolder {
+	padding: 35px;
+}
+
+#content {
+	border: 1px solid #999;
+	box-shadow: 5px 5px 4px #999;
+	-moz-box-shadow: 5px 5px 4px #999;
+	-webkit-box-shadow: 5px 5px 4px #999;
 }
 
 /* NAVIGATION MENU */
 
+.menu {
+	padding: 20px 10px 20px 10px;
+}
+
+.menu li {
+	list-style:none;
+	display:inline;
+	margin: 3px;
+	padding: 3px 13px 3px 13px;
+	background: #777;
+}
+.menu li a {
+		color: #FFF;
+}
+	
+	
 .nav {
     background: #fff url(../images/skin/shadow.jpg) bottom repeat-x;
     border: 1px solid #ccc;
