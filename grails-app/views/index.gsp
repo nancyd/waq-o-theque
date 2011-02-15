@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Welcome to Grails</title>
+        <title>La WAQ-o-theque</title>
         <meta name="layout" content="main" />
         <style type="text/css" media="screen">
 
@@ -51,6 +51,9 @@
         </style>
     </head>
     <body>
-      <div id="body" style="font-size: 30px;font-weight:bold">Bienvenue au site de la WAQ-o-theque!</div>
+      <div id="body" style="font-size: 
+          30px;font-weight:bold">
+          Bienvenue au site de la WAQ-o-theque!
+      </div>
     </body>
 </html>
