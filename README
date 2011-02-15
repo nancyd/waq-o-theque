@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>README: waq-o-theque</title>
+</head>
+<body>
+Une application qui permets de cataloguer mes 
+<span style="color:blue">biens</span> 
+(<span style="color:blue">livres</span>, 
+<span style="color:blue">CDs</span>, 
+<span style="color:blue">DVD</span>s) 
+et d'enregistrer aux quels de mes <span style="color:blue">amis</span> 
+je les prête.
+
+</body>
+</html>
