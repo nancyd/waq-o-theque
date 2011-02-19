@@ -17,6 +17,7 @@
           			<li><g:link controller="livre">Livres</g:link></li>
           			<li><g:link controller="CD">CDs</g:link></li>
           			<li><g:link controller="DVD">DVDs</g:link></li>
+          			<li><g:link controller="personne">Personnes</g:link></li>
         		</ul></div>        		
         		<g:layoutBody />
         	</div>
