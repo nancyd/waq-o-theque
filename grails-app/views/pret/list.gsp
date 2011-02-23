@@ -40,7 +40,7 @@
                         
                             <td><g:link action="show" id="${pretInstance.id}">${fieldValue(bean: pretInstance, field: "id")}</g:link></td>
                         
-                            <td>${fieldValue(bean: pretInstance, field: "emprunteur")}</td>
+                            <td><waqotheque:personne value="${pretInstance?.emprunteur}"/></td>
                         
                             <td>${fieldValue(bean: pretInstance, field: "bienPrete")}</td>
                         
