@@ -4,8 +4,8 @@ class PretController {
 
 //	def conseilPretsService;
 	ConseilPretsService conseilPretsService;
-	
-	def scaffold = true
+
+		def scaffold = true
 
 	def save = {
 		def pretInstance = new Pret(params)
@@ -20,6 +20,15 @@ class PretController {
 		}
 		else {
 			render(view: "create", model: [pretInstance: pretInstance])
+		}
+	}
+	
+	def ajaxEstCeUneBonneIdee = {
+		Personne emprunteur = Personne.get(params['emprunteur.id']);
+		if (conseilPretsService.devraitPreter(emprunteur)) {
+			render "Bon choix"
+		} else {
+			render "Ah &ccedil;a, &ccedil;'est pas une bonne id&eacute;e"
 		}
 	}
 

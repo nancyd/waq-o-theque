@@ -3,6 +3,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="layout" content="main" />
+        <g:javascript library="prototype"/>
         <g:set var="entityName" value="${message(code: 'pret.label', default: 'Pret')}" />
         <title><g:message code="default.create.label" args="[entityName]" /></title>
     </head>
@@ -31,7 +32,11 @@
                                     <label for="emprunteur"><g:message code="pret.emprunteur.label" default="Emprunteur" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: pretInstance, field: 'emprunteur', 'errors')}">
-                                    <g:select name="emprunteur.id" from="${com.nancydeschenes.waqotheque.Personne.list()}" optionKey="id" value="${pretInstance?.emprunteur?.id}"  />
+                                    <g:select name="emprunteur.id" 
+                                     from="${com.nancydeschenes.waqotheque.Personne.list()}" 
+                                     optionKey="id" value="${pretInstance?.emprunteur?.id}" 
+                                     onchange="miseAJourStatutEmprunteur()" />
+                                    <span id="bonneIdee">?</span>
                                 </td>
                             </tr>
                         
@@ -72,5 +77,15 @@
                 </div>
             </g:form>
         </div>
+            <g:javascript>
+            function miseAJourStatutEmprunteur() {
+              var select = document.getElementById('emprunteur.id');
+              ${g.remoteFunction(controller:'pret', 
+				  				 action: 'ajaxEstCeUneBonneIdee', 
+								 params:'\'emprunteur.id=\' + select.value', 
+								 update: "bonneIdee")}
+            }
+            window.onload = miseAJourStatutEmprunteur
+            </g:javascript>
     </body>
 </html>
